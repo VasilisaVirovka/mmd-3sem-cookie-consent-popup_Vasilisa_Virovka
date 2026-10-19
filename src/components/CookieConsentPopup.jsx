@@ -1,8 +1,11 @@
 "use client";
 import { LiaCookieBiteSolid } from "react-icons/lia";
 import { IoIosClose } from "react-icons/io";
+import  { useState } from "react"; 
 
 const CookieConsentPopup = () => {
+  const [isAccepted,setIsAccepted ] = useState(false);
+  // const isAccepted = false; 
   return (
     <section className="cookie-consent-popup">
       <header className="cookie-consent-popup-header">
@@ -14,6 +17,7 @@ const CookieConsentPopup = () => {
           We use cookies to improve your user experience!
         </p>
         <button className="cookie-consent-popup-cta pointer">
+          OnClick={() => setIsAccepted(true)}
           I like Cookies
         </button>
       </footer>
